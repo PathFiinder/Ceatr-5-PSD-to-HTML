@@ -1,2 +1,48 @@
 .header
-    
+    background-color: $header-footer-bgc
+    height: 70px
+    overflow: hidden
+    width: 100%
+    font-family: $font-site
+    font-size: $font-size-site
+    color: $font-color-site
+    position: relative
+    &__container
+        width: 55%
+        height: 50%
+        overflow: hidden
+        position: absolute
+        top: calc(35px/2)
+        left: 5px
+        @include displayFlex(column)
+        .header__single-contact
+            @include displayFlex(row)
+            .header__icon
+                margin: 2px 10px 2px 5px
+            .header__contact-info
+                margin: 2px 10px 2px 5px
+    &__form,form
+        .form__input
+            display: none
+            font-family: FontAwesome, "Open Sans", Verdana, sans-serif
+            &::placeholder
+                font-family: "Font Awesome 5 Free"
+                -moz-osx-font-smoothing: grayscale
+                -webkit-font-smoothing: antialiased
+                display: inline-block
+                font-style: normal
+                font-variant: normal
+                text-rendering: auto
+                line-height: 1
+                font-weight: 900
+                font-size: 18px
+        .form__button
+            position: absolute
+            top: 50%
+            right: 20px
+            transform: translateY(-50%)
+            border: none
+            background-color: transparent
+            color: $font-color-site
+            font-family: $font-site
+            font-size: $font-size-site

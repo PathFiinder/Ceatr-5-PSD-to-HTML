@@ -7,14 +7,52 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weekly Webdev Challenge 33</title>
     <meta name="author" content="Krystian Konecki">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
     <div class="wrapper">
-        <header class="header">head</header>
-        <section class="main-side"></section>
-        <section class="global"></section>
+        <header class="header">
+            <div class="header__container">
+                <div class="header__single-contact">
+                    <i class="header__icon header__icon--phone fas fa-phone"></i>
+                    <p class="header__contact-info">123 456 7890</p>
+                </div>
+                <div class="header__single-contact">
+                    <i class="header__icon fas fa-envelope"></i>
+                    <p class="header__contact-info">sampel@name.com</p>
+                </div>
+            </div>
+            <form action="#" class="header__form form">
+                <input type="text" class="form__input" placeholder="Search this site    &#xf002;">
+                <button class="form__button">Sign in</button>
+            </form>
+        </header>
+        <section class="main-side">
+            <h1 class="main-side__logo">ceatr</h1>
+            <i class="main-side__bar-icon fas fa-bars"></i>
+            <nav class="main-side__navigation menu">
+                <ul class="menu__list">
+                    <li class="menu__item"><a href="#" class="menu__link menu__link--home">Home</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link menu__link--about-us">About us</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link menu__link--pricing">Pricing</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link menu__link--blog">Blog</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link menu__link--contact-us">Contact us</a></li>
+                </ul>
+            </nav>
+            <div class="main-side__container container">
+                <h2 class="container__title">Make something valuable</h2>
+                <p class="container__describe">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore consequat. Duis aute irure dolor in reprehenderit in volExcepteur
+                </p>
+                <button class="button container__button">Get Started</button>
+            </div>
+        </section>
+        <section class="global">global</section>
         <section class="services"></section>
         <section class="productive"></section>
         <section class="newslatter"></section>
@@ -23,6 +61,7 @@
         <footer class="footer"></footer>
     </div>
     <script src="javascript/script.js"></script>
+    <script src="https://kit.fontawesome.com/56327ab928.js"></script>
     </script>
 </body>
 
