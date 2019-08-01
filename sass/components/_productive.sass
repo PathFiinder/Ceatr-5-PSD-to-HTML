@@ -1,4 +1,176 @@
 .productive
-    height: 1000px
+    height: 760px
     background-color: white
-    
+    font-family: $font-site
+    font-size: $font-size-site
+    color: $site-color
+    position: relative
+    overflow: hidden
+    padding-top: 50px
+    &__container
+        height: 260px
+        width: 90%
+        margin: 0 auto
+        overflow: hidden
+        .container__title
+            font-weight: bold
+            font-size: 20px
+            &--blue
+                padding-bottom: 5px
+                color: #0891f9
+        .container__describe
+            width: 90%
+            margin: 15px auto 10px auto
+            font-weight: 300
+            &:first-letter
+                font-size: 20px
+            &--bold
+                font-weight: bold
+        .container__button
+            color: #0891f9
+            border-color:  #0891f9
+            height: 50px
+            margin-left: calc(100% - 180px - 10px)
+            margin-top: 5px 
+    &__photos-container,.photos-container
+        width: 100%
+        height: 500px
+        overflow: hidden
+        position: relative
+        .photos-container__image
+            width: 350px
+            height: 250px
+            margin-left: 30%
+        .photos-container__box,.box
+            width: 310px
+            height: 300px
+            position: absolute
+            top: 150px
+            right: 5px 
+            background-color: pink
+            .box__counter,.b-counter
+                width: 100px
+                height: 20px
+                @include displayFlex(row)
+                position: absolute
+                bottom: 15px
+                left: 10px
+                .b-counter__container
+                    flex-basis: 30%
+                    margin-right: 10px
+                    line-height: 20px
+                    margin-left: 5px
+                    font-weight: bold
+                .b-counter__arrow 
+                    line-height: 20px
+                    flex-basis: 30%  
+            .box__list
+                @include displayFlex(row)
+                width: 180px
+                height: 20px
+                text-align: center
+                margin: 0 auto
+                position: absolute
+                top: 125px
+                left: -65px
+                transform: rotate(-90deg)
+                .box__item
+                    flex-basis: 14%
+                    height: 100%
+                    overflow: hidden
+                    position: relative
+                    &--last
+                        flex-basis: 30%
+                        text-align: center
+                    .box__circle
+                        height: 10px
+                        width: 10px
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%,-50%)
+                        border: 1px solid black
+                        border-radius: 50%
+                        &--blue
+                            box-shadow: 0 0 3px 1px  #00ff79
+                            background-color: #0891f9
+                            border-color: darken(#00ff79,10%)
+                        &--active
+                            border: 2px solid black
+                            background-color: #0891f9
+            
+            .box__main-container,.main-container
+                background-color: white
+                box-shadow: 0 0 29px 8px rgba(8, 145, 249, 0.16)
+                width: 250px
+                height: 230px
+                position: absolute
+                top: 20px
+                right: 10px  
+                padding-top: 10px
+                overflow: hidden
+                .box__main-container:before
+                    content: ""
+                    display: block
+                    height: 100px
+                    width: 50px
+                    background-color: red
+                    position: absolute
+                    top: 0
+                    left: 0
+                    
+                .main-container__title
+                    text-align: center
+                    text-transform: uppercase
+                    font-size: 20px
+                    font-weight: bold
+                    margin-bottom: 10px
+                .main-container__content
+                    width: 90%
+                    margin: 0 auto
+                    font-weight: 300
+                    font-size: 13px
+                    &:first-letter
+                        font-size: 18px
+                    &--bold
+                        font-weight: bold
+                    &--first
+                        margin-bottom: 10px
+                .main-container__zoom-shaper,.zoom-shaper
+                    width: 120px
+                    height: 40px
+                    overflow: hidden
+                    position: absolute
+                    bottom: 5px
+                    right: 10px
+                    .zoom-shaper__list
+                        @include displayFlex(row)
+                        height: 12px
+                        width: 90px
+                        margin-left: 30px
+                        .zoom-shaper__item
+                            flex-basis: 20%
+                            text-align: center
+                            .zoom-shaper__icon
+                                color: darken(#0891f9,10%)
+                                &--white
+                                    color: #0891f9
+                    .zoom-shaper__line-image
+                        height: 8px
+                        width: 120px
+                        transform: rotate(180deg)
+                    .zoom-shaper__title
+                        width: 100px
+                        margin-left: 15px
+                        font-weight: 300
+        .photos-container__button
+            border-color: #0891f9
+            color: #0891f9
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
+            height: 45px
+            margin-bottom: 10px
+
+                        
