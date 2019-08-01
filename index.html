@@ -64,9 +64,13 @@
                 <button class="button global__button">Get Started</button>
             </div>
             <div class="global__photos-wrapper photos-wrapper">
+                <img src="images/global__line-top.png" alt="Top-left corner photo"
+                    class="photos-wrapper__corners-images photos-wrapper__corners-images--top-left">
+                <img src="images/global__line-top.png" alt="Top-right corner photo"
+                    class="photos-wrapper__corners-images photos-wrapper__corners-images--top-right">
                 <div class="photos-wrapper__counter counter">
                     <div class="counter__container"><span class="counter__actual">00</span>/<span
-                            class="counter__max">05</span></div>
+                            class="counter__max">04</span></div>
                     <i class="counter__arrow counter__arrow--left fas fa-chevron-left"></i>
                     <i class="counter__arrow counter__arrow--right fas fa-chevron-right"></i>
                 </div>
@@ -76,22 +80,127 @@
                     <img src="images/single-photo__image.png" alt="Single photo - Earth" class="single-photo__image">
                     <img src="images/shadow.png" alt="Shadow" class="single-photo__shadow">
                 </div>
+                <img src="images/global__line.png" alt="Bottom-left corner photo"
+                    class="photos-wrapper__corners-images photos-wrapper__corners-images--bottom-right">
+                <img src="images/global__line.png" alt="Bottom-right corner photo"
+                    class="photos-wrapper__corners-images photos-wrapper__corners-images--bottom-left">
             </div>
             <ul class="global__list">
-                <li class="global__item"><span class="global__circle" data-id = "1"></span></li>
-                <li class="global__item"><span class="global__circle" data-id = "2"></span></li>
-                <li class="global__item"><span class="global__circle" data-id = "3"></span</li>
-                <li class="global__item"><span class="global__circle" data-id = "4"></span></li>
-                <li class="global__item"><span class="global__circle" data-id = "5"></span></li>
-                <li class="global__item global__item--last"><span class="global__circle global__circle--blue"></span></li>
+                <li class="global__item"><span class="global__circle" data-id="1"></span></li>
+                <li class="global__item"><span class="global__circle" data-id="2"></span></li>
+                <li class="global__item"><span class="global__circle" data-id="3"></span</li> <li class="global__item">
+                        <span class="global__circle" data-id="4"></span></li>
+                <li class="global__item"><span class="global__circle" data-id="5"></span></li>
+                <li class="global__item global__item--last"><span class="global__circle global__circle--blue"></span>
+                </li>
             </ul>
         </section>
-        <section class="services">sssdfdsfdsffd</section>
-        <section class="productive"></section>
-        <section class="newslatter"></section>
-        <section class="logos"></section>
-        <section class="site-map"></section>
-        <footer class="footer"></footer>
+        <section class="services">
+            <h2 class="services__title">Awesome <span class="services__title--blue">Services</span></h2>
+            <p class="services__content">Our experties area</p>
+            <div class="servies__container container">
+                <div class="container__single container__single--active" data-services="0">
+                    <img src="images/global__line.png" alt="Top-left corner photo"
+                        class="container_corners-images container_corners-images--top-left container_corners-images--active">
+                    <img src="images/global__line.png" alt="Top-right corner photo"
+                        class="container_corners-images container_corners-images--top-right container_corners-images--active">
+                    <i class="container__icon conatiner__icon-tv fas fa-tv"></i>
+                    <h3 class="container__title">Interface Design</h3>
+                    <p class="container__describe">laboris nisi ut aliquip ex ea in commodo consequat. Duis aute nisi
+                        eprehenderit in voluptate velit es laboris ut.</p>
+                </div>
+                <div class="container__single" data-services="1">
+                    <img src="images/global__line.png" alt="Top-left corner photo"
+                        class="container_corners-images container_corners-images--top-left">
+                    <img src="images/global__line.png" alt="Top-right corner photo"
+                        class="container_corners-images container_corners-images--top-right">
+                    <i class="container__icon conatiner__icon-tv fas fa-mobile-alt"></i>
+                    <h3 class="container__title">iOS Development</h3>
+                    <p class="container__describe">laboris nisi ut aliquip ex ea in commodo consequat. Duis aute nisi
+                        eprehenderit in voluptate velit es laboris ut.</p>
+                </div>
+                <div class="container__single" data-services="2">
+                    <img src="images/global__line.png" alt="Top-left corner photo"
+                        class="container_corners-images container_corners-images--top-left">
+                    <img src="images/global__line.png" alt="Top-right corner photo"
+                        class="container_corners-images container_corners-images--top-right">
+                    <i class="container__icon conatiner__icon-tv fas fa-gift"></i>
+                    <h3 class="container__title">Print Design</h3>
+                    <p class="container__describe">laboris nisi ut aliquip ex ea in commodo consequat. Duis aute nisi
+                        eprehenderit in voluptate velit es laboris ut.</p>
+                </div>
+            </div>
+        </section>
+        <section class="productive">
+            
+        </section>
+        <section class="newslatter">
+            <div class="newslatter__container container">
+                <h2 class="container__item container__title container__title--blue">Subscribe our</h2>
+                <img src="images/newslatter__line.png" alt=""
+                    class="container__item container__corners-images container__corners-images--top-right">
+                <img src="images/newslatter__line.png" alt=""
+                    class="container__item container__corners-images container__corners-images--bottom-left">
+                <h2 class="container__item container__title container__title--black">Newslatter</h2>
+            </div>
+            <p class="newslatter__describe">Subscribe, we will send you our weekly hot offers</p>
+            <form action="post" class="newslatter__form">
+                <input type="text"
+                    class="newslatter__item newslatter__input newslatter__input--active newslatter__input--name"
+                    placeholder="Enter your Name">
+                <input type="text" class="newslatter__item newslatter__input newslatter__input--email"
+                    placeholder="Enter your Email">
+                <button class="button newslatter__item newslatter__button">Send us</button>
+            </form>
+        </section>
+        <section class="logos">
+            <h2 class="logos__title"><span class="logos__title--blue">Brand, </span>We work with</h2>
+            <div class="logos__container">
+                <div class="logos__single-logo logos__single-logo--active">
+                    <img src="images/logos__image1.png" alt="First logo" class="logos__single-image">
+                </div>
+                <div class="logos__single-logo">
+                    <img src="images/logos__image2.png" alt="Second logo" class="logos__single-image">
+                </div>
+                <div class="logos__single-logo">
+                    <img src="images/logos__image3.png" alt="Third logo" class="logos__single-image">
+                </div>
+                <div class="logos__single-logo">
+                    <img src="images/logos__image4.png" alt="Fourth logo" class="logos__single-image">
+                </div>
+            </div>
+        </section>
+        <section class="site-map">
+            <div class="site-map__container container">
+                <ul class="container__list">Company
+                    <li class="container__item"><a href="#" class="container__link">Home</a></li>
+                    <li class="container__item"><a href="#" class="container__link">About us</a></li>
+                    <li class="container__item"><a href="#" class="container__link">Pricing</a></li>
+                    <li class="container__item"><a href="#" class="container__link">Contact us</a></li>
+                </ul>
+                <ul class="container__list">Quick Links
+                    <li class="container__item"><a href="#" class="container__link">Designer</a></li>
+                    <li class="container__item"><a href="#" class="container__link">Pricing plan</a></li>
+                    <li class="container__item"><a href="#" class="container__link">Services</a></li>
+                    <li class="container__item"><a href="#" class="container__link">Download</a></li>
+                </ul>
+                <ul class="container__list">Conditions
+                    <li class="container__item"><a href="#" class="container__link">Online support</a></li>
+                    <li class="container__item"><a href="#" class="container__link">Privacy</a></li>
+                    <li class="container__item"><a href="#" class="container__link">Terms</a></li>
+                    <li class="container__item"><a href="#" class="container__link">Policy</a></li>
+                </ul>
+                <ul class="container__list container__list--icons">Get connected
+                        <li class="container__item"><i class="container__link container__link--facebook fab fa-facebook-f"></i></li>
+                        <li class="container__item"><i class="container__link fab fa-twitter"></i></li>
+                        <li class="container__item"><i class="container__link fab fa-google-plus-g"></i></li>
+                    </ul>
+
+            </div>
+        </section>
+        <footer class="footer">
+            <h2 class="footer__title">&copy; projectName 2016 Ibrahim emran</h2>
+        </footer>
     </div>
     <script src="javascript/script.js"></script>
     <script src="https://kit.fontawesome.com/56327ab928.js"></script>

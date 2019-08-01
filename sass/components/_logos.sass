@@ -1,0 +1,35 @@
+.logos
+    background-color: white
+    height: 450px
+    font-family: $font-site
+    font-size: $font-size-site
+    color: $site-color
+    position: relative
+    overflow: hidden
+    padding-top: 50px
+    text-align: center
+    &__title
+        font-size: 26px
+        font-weight: bold
+        &--blue
+            color: #0891f9
+    &__container
+        @include displayFlex(column)
+        width: 70%
+        margin: 20px auto
+        height: 380px
+        overflow: hidden
+        .logos__single-logo
+            flex-basis: 25%
+            margin: 10px
+            box-shadow: 0 8px 5px rgba(0, 0, 0, 0.2)
+            position: relative
+            &--active
+                box-shadow: 0 0 5px 4px rgba(46, 133, 251, 0.18)
+            .logos__single-image
+                height: 60px
+                width: 70%
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%,-50%)

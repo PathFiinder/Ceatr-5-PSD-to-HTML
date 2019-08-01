@@ -1,0 +1,55 @@
+.newslatter
+    height: 400px
+    background-color: $servies-subs-bgc
+    font-family: $font-site
+    font-size: $font-size-site
+    color: $site-color
+    position: relative
+    overflow: hidden
+    padding-top: 50px
+    text-align: center
+    &__container
+        width: 280px
+        height: 72px
+        margin: 0 auto
+        overflow: hidden
+        @include displayFlex(row)
+            flex-wrap: wrap
+        .container__item
+            flex-basis: 50%
+            height: 36px
+            font-size: 18px
+            line-height: 36px
+        .container__title
+            font-weight: bold
+            &--blue
+                color: #0891f9 
+        .container__corners-images
+            height: 10px
+            margin-top: calc((36px - 10px)/2)       
+    &__describe
+        margin: 10px auto 20px auto
+        width: 80%
+        font-weight: 300
+    &__form
+        width: 90%
+        margin: 0 auto
+        height: 200px
+        @include displayFlex(column)
+        .newslatter__item
+            flex-basis: 25%
+            margin: 10px
+        .newslatter__input
+            border: none
+            padding-left: 10px
+            &:hover::placeholder
+                color: black
+            &::placeholder
+                color: #4e4e4d
+            &--active
+                box-shadow: 0 0 20px rgba(21, 137, 255, 0.2)
+        .newslatter__button
+            flex-grow: 1
+            border-color: #0891f9
+            color: #0891f9
+            margin: 10px auto

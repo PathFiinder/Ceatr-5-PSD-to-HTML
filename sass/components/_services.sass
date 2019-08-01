@@ -1,0 +1,66 @@
+.services
+    background-color: $servies-subs-bgc
+    height: 600px
+    font-family: $font-site
+    font-size: $font-size-site
+    color: $site-color
+    position: relative
+    overflow: hidden
+    padding-top: 20px
+    text-align: center
+    &__title
+        font-size: 30px
+        font-weight: bold
+        margin-bottom: 10px
+        &--blue
+           color: #0891f9
+    &__content
+        font-weight: bold
+        margin-bottom: 10px
+    &__container,.container
+        width: 90%
+        margin: 0 auto
+        height: 520px
+        overflow: hidden
+        @include displayFlex(column)
+        .container__single
+            margin: 8px 
+            flex-basis: 33.33%
+            position: relative
+            box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2)
+            &--active
+                box-shadow: 0 0 6px 3px rgba(8, 145, 249, 0.2)
+            .container_corners-images
+                position: absolute
+                height: 40px
+                width: 40px
+                display: none
+                &--top-left
+                    top: 0
+                    left: 0
+                    transform: rotate(-90deg)
+                &--top-right
+                    top: 0
+                    right: 0
+                &--active
+                    display: block
+            .container__icon
+                height: 50px
+                width: 50px
+                margin-top: 10px
+                font-size: 20px
+                line-height: 50px
+                border: 1px solid #0891f9
+                border-radius: 50%
+                color: #0891f9
+            .container__title
+                margin: 6px 0
+                font-size: 20px
+                font-weight: bold
+            .container__describe
+                font-weight: 300
+                width: 80%
+                margin: 0 auto
+
+
+
