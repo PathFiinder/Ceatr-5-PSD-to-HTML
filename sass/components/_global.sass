@@ -6,11 +6,23 @@
     color: $site-color
     position: relative
     padding-top: 20px
-    overflow: hidden
+    @include mediaQ(768px)
+        padding-top: 50px
+        z-index: 1
+        height: 350px
+    @include mediaQ(1336px)
+        height: 400px
     &__container
         width: 90%
         margin: 0 auto
         text-align: center
+        @include mediaQ(768px)
+            width: 400px
+            margin: 0 0 0 30px
+        @include mediaQ(1336px)
+            margin-left: 100px
+        @include mediaQ(1440px)
+            margin-left: 200px
         .global__title
             font-size: 36px
             font-weight: bold
@@ -30,11 +42,23 @@
     &__photos-wrapper
         background-color: #f7f7f7
         box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2)
-        width: 95%
+        width: 300px
         margin: 10px auto 0 auto
         height: 290px
         position: relative
         padding-top: 10px
+        @include mediaQ(768px)
+            position: absolute
+            top: -30px
+            right: 20px
+            width: 320px
+            height: 320px
+        @include mediaQ(1024px)
+            right: 100px
+        @include mediaQ(1336px)
+            right: 200px
+            width: 350px
+            height: 350px
         .photos-wrapper__corners-images
             position: absolute
             height: 40px
@@ -90,6 +114,9 @@
             .single-photo__image
                 height: 200px
                 width: 200px
+                @include mediaQ(1336px)
+                    height: 250px
+                    width: 250px
             .single-photo__shadow
                 position: absolute
                 bottom: 5px
@@ -102,6 +129,15 @@
         height: 20px
         text-align: center
         margin: 40px auto 20px auto
+        @include mediaQ(768px)
+            position: absolute
+            top: 300px
+            right: 80px
+        @include mediaQ(1024px)
+            right: 160px
+        @include mediaQ(1336px)
+            top: 330px
+            right: 280px
         .global__item
             flex-basis: 14%
             height: 100%

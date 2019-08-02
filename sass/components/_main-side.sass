@@ -9,6 +9,13 @@
     background-repeat: no-repeat
     background-size: 1000px 500px
     background-position: 55% 240px
+    @include mediaQ(640px)
+        height: 350px
+        background-position: 55% 100px
+    @include mediaQ(768px)
+        height: 450px
+        background-size: 150% 80%
+        background-position: 55% 100px
     &__logo
         font-family: 'Saira Stencil One', cursive
         font-size: 25px
@@ -16,22 +23,50 @@
         position: absolute
         top: 10px
         left: 5px
+        @include mediaQ(768px)
+            left: 20px
     &__bar-icon
         position: absolute
         top: 10px
         right: 20px
         font-size: 20px
-    &__navigation,menu
+    @include mediaQ(568px)
+        .main-side__bar-icon--none
+            display: none
+    &__navigation
         background-color: $header-footer-bgc
         position: absolute
         top: calc(10px + 25px + 5px)
+        right: 0
         width: 100%
         text-align: center
         display: none
+        @include mediaQ(568px)
+            display: block
+            top: 10px
+            right: 10px
+            width: 320px
+            background-color: transparent
+        @include mediaQ(768px)
+            width: 500px
+        @include mediaQ(1336px)
+            width: 600px
         .menu__list
             @include displayFlex(column)
+            @include mediaQ(568px)
+                @include displayFlex(row)
+                width: 320px
+            @include mediaQ(768px)
+                width: 500px
+            @include mediaQ(1336px)
+                width: 600px
             .menu__item
                 padding: 5px
+                @include mediaQ(768px)
+                    flex-basis: 25%
+                    font-size: 16px
+                @include mediaQ(1336px)
+                    font-size: 20px
                 &:hover
                     border: 1px solid #ffffff
                     background-color: #47b0ff
@@ -45,7 +80,6 @@
     .menu--active
         display: block
         z-index: 1
-
     &__container,.container
         overflow: hidden
         text-align: center
@@ -55,13 +89,21 @@
         top: 100px
         left: 50%
         transform: translateX(-50%)
+        @include mediaQ(768px)
+            width: 550px
+            top: 150px
         .container__title
             font-size: 30px
             font-weight: bold
         .container__describe
             margin-top: 10px
+            @include mediaQ(768px)
+                margin-top: 15px
         .container__button
             margin-top: 10px
+            @include mediaQ(768px)
+                margin-top: 15px
+                height: 50px
 
 
         

@@ -8,38 +8,58 @@
     color: $font-color-site
     position: relative
     &__container
-        width: 55%
+        width: 180px
         height: 50%
         overflow: hidden
         position: absolute
         top: calc(35px/2)
         left: 5px
         @include displayFlex(column)
+        @include mediaQ(768px)
+            @include displayFlex(row)
+            width: 320px
+            height: 25px
+            line-height: 25px
+        @include mediaQ(1336px)
+            left: 15px
         .header__single-contact
             @include displayFlex(row)
             .header__icon
                 margin: 2px 10px 2px 5px
+                @include mediaQ(768px)
+                    height: 15px
+                    width: 15px
+                    font-size: 14px
+                    line-height: 25px
             .header__contact-info
                 margin: 2px 10px 2px 5px
-    &__form,form
+    &__form
         .form__input
             display: none
-            font-family: FontAwesome, "Open Sans", Verdana, sans-serif
+            position: absolute
+            top: 50%
+            right: 95px
+            transform: translateY(-50%)
+            height: 20px
+            width: 200px
+            border: 1px solid #ffffff
+            background-color: #47b0ff
+            padding-left: 10px
+            opacity: 0.4
             &::placeholder
-                font-family: "Font Awesome 5 Free"
-                -moz-osx-font-smoothing: grayscale
-                -webkit-font-smoothing: antialiased
                 display: inline-block
-                font-style: normal
-                font-variant: normal
-                text-rendering: auto
-                line-height: 1
-                font-weight: 900
-                font-size: 18px
+                font-weight: bold
+                font-size: 14px
+                color: white
+                opacity: 1
+            @include mediaQ(568px)
+                display: block
         .form__button
             position: absolute
             top: 50%
             right: 20px
+            width: 65px 
+            overflow: hidden
             transform: translateY(-50%)
             border: none
             background-color: transparent

@@ -8,6 +8,10 @@
     overflow: hidden
     padding-top: 50px
     text-align: center
+    @include mediaQ(568px)
+        height: 280px
+    @include mediaQ(768px)
+        height: 220px
     &__container
         width: 280px
         height: 72px
@@ -15,6 +19,8 @@
         overflow: hidden
         @include displayFlex(row)
             flex-wrap: wrap
+        @include mediaQ(568px)
+            width: 320px
         .container__item
             flex-basis: 50%
             height: 36px
@@ -29,16 +35,32 @@
             margin-top: calc((36px - 10px)/2)       
     &__describe
         margin: 10px auto 20px auto
-        width: 80%
+        width: 280px
         font-weight: 300
+        @include mediaQ(568px)
+            width: 350px
     &__form
-        width: 90%
+        width: 300px
         margin: 0 auto
         height: 200px
         @include displayFlex(column)
+        @include mediaQ(568px)
+            width: 500px
+            height: 150px
+            @include displayFlex(row)
+                flex-wrap: wrap
+        @include mediaQ(768px)
+            width: 700px
+            height: 60px
+        @include mediaQ(1024px)
+            width: 850px
         .newslatter__item
             flex-basis: 25%
             margin: 10px
+            @include mediaQ(568px)
+                flex-basis: 219px
+            @include mediaQ(768px)
+                flex-basis: calc(33.33% - 30px)
         .newslatter__input
             border: none
             padding-left: 10px
@@ -53,3 +75,9 @@
             border-color: #0891f9
             color: #0891f9
             margin: 10px auto
+            @include mediaQ(568px)
+                flex-grow: 0
+                flex-basis: 40%
+                height: 50px
+            @include mediaQ(768px)
+                flex-basis: 150px

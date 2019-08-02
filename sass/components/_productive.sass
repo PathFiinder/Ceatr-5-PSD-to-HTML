@@ -7,11 +7,17 @@
     position: relative
     overflow: hidden
     padding-top: 50px
+    @include mediaQ(768px)
+        height: 650px
     &__container
         height: 260px
         width: 90%
         margin: 0 auto
         overflow: hidden
+        @include mediaQ(568px)
+            height: 200px
+        @include mediaQ(768px)
+            width: 550px
         .container__title
             font-weight: bold
             font-size: 20px
@@ -22,6 +28,8 @@
             width: 90%
             margin: 15px auto 10px auto
             font-weight: 300
+            @include mediaQ(768px)
+                letter-spacing: 1px
             &:first-letter
                 font-size: 20px
             &--bold
@@ -32,21 +40,55 @@
             height: 50px
             margin-left: calc(100% - 180px - 10px)
             margin-top: 5px 
+            @include mediaQ(768px)
+                margin-top: 15px
     &__photos-container,.photos-container
         width: 100%
         height: 500px
         overflow: hidden
         position: relative
+        @include mediaQ(768px)
+            margin-top: 25px
+            height: 420px
         .photos-container__image
             width: 350px
             height: 250px
             margin-left: 30%
+            @include mediaQ(568px)
+                width: 450px
+                margin-left: 25%
+            @include mediaQ(768px)
+                width: 500px
+                height: 350px
+                margin-left: 50%
+            @include mediaQ(1024px)
+                margin-left: 0
+                position: absolute
+                top: 0
+                right: 0
+                width: 550px
+            @include mediaQ(1336px)
+                width: 700px
         .photos-container__box,.box
             width: 310px
             height: 300px
             position: absolute
             top: 150px
-            right: 5px 
+            left: 5px 
+            @include mediaQ(568px)
+                left: 80px
+                width: 400px
+            @include mediaQ(768px)
+                top: 25px
+                left: 110px
+            @include mediaQ(768px)
+                left: 160px
+            @include mediaQ(1336px)
+                left: 250px
+                width: 500px
+            @include mediaQ(1440px)
+                width: 600px
+                left: 200px
             .box__counter,.b-counter
                 width: 100px
                 height: 20px
@@ -54,6 +96,12 @@
                 position: absolute
                 bottom: 15px
                 left: 10px
+                @include mediaQ(768px)
+                    left: -60px
+                @include mediaQ(1336px)
+                    left: 20px
+                @include mediaQ(1440px)
+                    left: 35px
                 .b-counter__container
                     flex-basis: 30%
                     margin-right: 10px
@@ -73,6 +121,14 @@
                 top: 125px
                 left: -65px
                 transform: rotate(-90deg)
+                @include mediaQ(568px)
+                    left: -50px
+                @include mediaQ(768px)
+                    left: -70px
+                @include mediaQ(1336px)
+                    left: -20px
+                @include mediaQ(1440px)
+                    left: 0px
                 .box__item
                     flex-basis: 14%
                     height: 100%
@@ -104,6 +160,11 @@
                 position: absolute
                 top: 10px
                 right: 40px
+                @include mediaQ(568px)
+                    right: 60px
+                @include mediaQ(768px)
+                    width: 60px
+                    right: 70px
             .box__main-container
                 background-color: white
                 box-shadow: 0 0 29px 8px rgba(8, 145, 249, 0.16)
@@ -113,8 +174,14 @@
                 top: 20px
                 right: 10px  
                 padding-top: 10px
-                //overflow: hidden 
+                overflow: hidden 
                 z-index: 1
+                @include mediaQ(568px)
+                    width: 300px
+                @include mediaQ(768px)
+                    width: 350px
+                @include mediaQ(1440px)
+                    width: 420px
                 .main-container__title
                     text-align: center
                     text-transform: uppercase
@@ -126,6 +193,8 @@
                     margin: 0 auto
                     font-weight: 300
                     font-size: 13px
+                    @include mediaQ(768px)
+                        width: 75%
                     &:first-letter
                         font-size: 18px
                     &--bold
@@ -139,6 +208,8 @@
                     position: absolute
                     bottom: 5px
                     right: 10px
+                    @include mediaQ(768px)
+                        right: 20px
                     .zoom-shaper__list
                         @include displayFlex(row)
                         height: 12px
@@ -168,5 +239,11 @@
             transform: translateX(-50%)
             height: 45px
             margin-bottom: 10px
+            @include mediaQ(568px)
+                margin-bottom: 0px
+            @include mediaQ(768px)
+                left: 35%
+                bottom: 45px
+                width: 150px
 
                         

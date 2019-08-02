@@ -24,6 +24,32 @@ barIcon.addEventListener('click', () => {
     navClass.classList.toggle('menu--active')
 });
 
+
+//Scroll
+
+const homePosTop = $('.main-side').offset().top
+const aboutUsPosTop = $('.global').offset().top
+const pricingPosTop = $('.productive').offset().top
+const blogPosTop = $('.newslatter').offset().top
+const contactPosTop = $('.site-map').offset().top
+
+const positionTopArray = [homePosTop,aboutUsPosTop,pricingPosTop,blogPosTop,contactPosTop]
+const navButtonArray = ['home','about-us','pricing','blog','contact-us'];
+
+function toScroll(positionTop){
+    $('body, html').animate({
+        scrollTop: positionTop
+    },1000)
+    navClass.classList.remove('menu--active')
+}
+
+navButtonArray.forEach((element,index) => {
+    document.querySelector(`.menu__link--${element}`).addEventListener('click', () => {
+        toScroll(positionTopArray[index])
+    })
+});
+
+
 //Global 
 let counter = 0;
 

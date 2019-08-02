@@ -8,6 +8,8 @@
     overflow: hidden
     padding-top: 50px
     text-align: center
+    @include mediaQ(568px)
+        height: 250px
     &__title
         font-size: 26px
         font-weight: bold
@@ -19,6 +21,16 @@
         margin: 20px auto
         height: 380px
         overflow: hidden
+        @include mediaQ(568px)
+            @include displayFlex(row)
+            height: 150px
+            width: 550px
+        @include mediaQ(768px)
+            width: 700px
+        @include mediaQ(1024px)
+            width: 900px
+        @include mediaQ(1336px)
+            width: 1000px
         .logos__single-logo
             flex-basis: 25%
             margin: 10px

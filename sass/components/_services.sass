@@ -8,6 +8,8 @@
     overflow: hidden
     padding-top: 20px
     text-align: center
+    @include mediaQ(568px)
+        height: 350px
     &__title
         font-size: 30px
         font-weight: bold
@@ -18,11 +20,22 @@
         font-weight: bold
         margin-bottom: 10px
     &__container,.container
-        width: 90%
+        width: 300px
         margin: 0 auto
         height: 520px
         overflow: hidden
         @include displayFlex(column)
+        @include mediaQ(568px)
+            @include displayFlex(row)
+            width: 550px
+            height: 250px
+        @include mediaQ(768px)
+            width: 700px
+            height: 220px
+        @include mediaQ(1024px)
+            width: 800px    
+        @include mediaQ(1336px)
+            width: 1000px
         .container__single
             margin: 8px 
             flex-basis: 33.33%
@@ -61,6 +74,8 @@
                 font-weight: 300
                 width: 80%
                 margin: 0 auto
+                @include mediaQ(768px)
+                    margin-top: 10px
 
 
 
