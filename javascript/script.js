@@ -11,6 +11,12 @@ const servicesSingleContainer = document.querySelectorAll('.container__single');
 const servicesCorners = document.querySelectorAll('.container_corners-images');
 const newslatterInputs = document.querySelectorAll('.newslatter__input');
 const logosList = document.querySelectorAll('.logos__single-logo');
+const productiveCounterMax = document.querySelector('.b-counter__container--max');
+const productiveCounterActual = document.querySelector('.b-counter__container--actual');
+const productiveLeftArrow = document.querySelector('.b-counter__arrow--left');
+const productiveRightArrow = document.querySelector('.b-counter__arrow--right')
+const productiveBoxList = document.querySelectorAll('[data-box]');
+const productiveMainName = document.querySelector('.main-container__title');
 
 
 //Bar
@@ -35,10 +41,8 @@ globalCounterMax.textContent = `0${globalCircleList.length-1}`;
 
 globalLeftArrow.addEventListener('click', () => {
     counter--;
-    console.log(counter)
     if (counter < 0)
         counter = 4;
-
     [...globalCircleList].forEach((element) => element.classList.remove('global__circle--active'));
     globalCircleList[counter].classList.add('global__circle--active');
     globalNumber.textContent = counter;
@@ -48,11 +52,8 @@ globalLeftArrow.addEventListener('click', () => {
 
 globalRightArrow.addEventListener('click', () => {
     counter++;
-    console.log(counter)
-
     if (counter > 4)
         counter = 0;
-
     [...globalCircleList].forEach((element) => element.classList.remove('global__circle--active'));
     globalCircleList[counter].classList.add('global__circle--active');
     globalNumber.textContent = counter;
@@ -71,6 +72,44 @@ serviceContainer.addEventListener('click',(event) => {
             element.classList.add('container_corners-images--active');
         })
     }
+});
+
+//Productive
+
+const listOfNames = ['John Scott','Blade Read','Keanu Copeland','Shantelle Roberson','Mahima Burt']
+let productiveCounter = 0;
+
+productiveCounterMax.textContent = `0${productiveBoxList.length-1}`;
+
+[...productiveBoxList].forEach((element, index) => {
+    element.addEventListener('click', () => {
+        [...productiveBoxList].forEach((element) => element.classList.remove('box__circle--active'));
+        element.classList.add('box__circle--active');
+        productiveMainName.textContent = listOfNames[index]
+        productiveCounterActual.textContent = `0${index}`
+        productiveCounter = index
+    })
+});
+
+productiveLeftArrow.addEventListener('click', () => {
+    productiveCounter--;
+    if (productiveCounter < 0)
+    productiveCounter = 4;
+    [...productiveBoxList].forEach((element) => element.classList.remove('box__circle--active'));
+    productiveBoxList[productiveCounter].classList.add('box__circle--active');
+    productiveMainName.textContent = listOfNames[productiveCounter];
+    productiveCounterActual.textContent = `0${productiveCounter}`
+    
+})
+
+productiveRightArrow.addEventListener('click', () => {
+    productiveCounter++;
+    if (productiveCounter > 4)
+    productiveCounter = 0;
+    [...productiveBoxList].forEach((element) => element.classList.remove('box__circle--active'));
+    productiveBoxList[productiveCounter].classList.add('box__circle--active');
+    productiveMainName.textContent = listOfNames[productiveCounter];
+    productiveCounterActual.textContent = `0${productiveCounter}`;
 });
 
 //Newslatter

@@ -31,23 +31,25 @@
                     font-weight: 300
                     font-size: $font-size-site
         .container__list--icons
-            @include displayFlex(row)
-                flex-wrap: wrap
-                justify-content: center
+            @include displayFlex(column)
             height: 60px
-            .container__item
-                flex-basis: 33.33%
-                text-align: center
-                .container__link
-                    height: 30px
-                    width: 30px
-                    border-radius: 50%
-                    border: 1px solid white
-                    line-height: 30px
-                    display: block
-                    margin-left: 7.32px
-                    &:hover
-                        background-color: white
-                        color: #0891f9 
-                    &--facebook
-                        margin-top: -10px
+            .container__wrapper
+                @include displayFlex(row)
+                width: 134px
+                padding-top: 10px
+                .container__item
+                    flex-basis: 33.33%
+                    text-align: center
+                    .container__link
+                        height: 30px
+                        width: 30px
+                        border-radius: 50%
+                        border: 1px solid white
+                        line-height: 30px
+                        display: block
+                        margin-left: 7.32px
+                        &:hover
+                            background-color: white
+                            color: #0891f9 
+                        &--facebook
+                            margin-top: -10px
