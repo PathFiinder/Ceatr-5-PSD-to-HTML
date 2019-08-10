@@ -28,34 +28,32 @@
             list-style: none
             font-size: 17px
             .container__item    
-                flex-basis: 25%
-                &:nth-of-type(1)
-                    padding-top: 10px
+                flex-basis: 20%
                 .container__link
                     text-decoration: none
                     color: $font-color-site
                     font-weight: 300
                     font-size: $font-size-site
         .container__list--icons
-            @include displayFlex(column)
+            @include displayFlex(row)
+                flex-wrap: wrap
             height: 60px
-            .container__wrapper
-                @include displayFlex(row)
-                width: 134px
-                padding-top: 10px
-                .container__item
-                    flex-basis: 33.33%
-                    text-align: center
-                    .container__link
-                        height: 30px
-                        width: 30px
-                        border-radius: 50%
-                        border: 1px solid white
-                        line-height: 30px
-                        display: block
-                        margin-left: 7.32px
-                        &:hover
-                            background-color: white
-                            color: #0891f9 
-                        &--facebook
-                            margin-top: -10px
+            max-width: 150px
+            .container__item
+                flex-basis: 33.33%
+                text-align: center
+                &--first
+                    flex-basis: 100%
+                    margin-bottom: 10px
+                    text-align: start
+                .container__link
+                    height: 30px
+                    width: 30px
+                    border-radius: 50%
+                    border: 1px solid white
+                    line-height: 30px
+                    display: block
+                    margin-left: 7.32px
+                    &:hover
+                        background-color: white
+                        color: #0891f9 
